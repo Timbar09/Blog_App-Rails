@@ -1,0 +1,31 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx stylelint \"**/*.{css,scss}\"",
+    "fix": "npx stylelint \"**/*.{css,scss}\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timbar09/Blog_App-Rails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timbar09/Blog_App-Rails/issues"
+  },
+  "homepage": "https://github.com/Timbar09/Blog_App-Rails#readme",
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}

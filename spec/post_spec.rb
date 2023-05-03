@@ -17,6 +17,11 @@ RSpec.describe Post, type: :model do
       expect(@post).to_not be_valid
     end
 
+    it "title can't exceed 250 characters" do
+      @post.title = 'a' * 251
+      expect(@post).to_not be_valid
+    end
+
     it "text can't be blank" do
       @post.text = nil
       expect(@post).to_not be_valid

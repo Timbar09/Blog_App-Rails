@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  describe "creation" do
+  describe 'creation' do
     before do
-      @user = User.create(name: "John Doe", photo: "https://picsum.photos/200/300", bio: "I am John Doe")
-      @post = Post.create(author_id: @user.id, title: "My Post", text: "This is my post")
-      @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: "This is my comment")
+      @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
+      @post = Post.create(author_id: @user.id, title: 'My Post', text: 'This is my post')
+      @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: 'This is my comment')
     end
 
     it "text can't be blank" do
@@ -18,12 +18,12 @@ RSpec.describe Comment, type: :model do
       expect(@comment).to_not be_valid
     end
 
-    it "author_id must be an integer" do
-      @comment.author_id = "a"
+    it 'author_id must be an integer' do
+      @comment.author_id = 'a'
       expect(@comment).to_not be_valid
     end
 
-    it "author_id must be greater than 0" do
+    it 'author_id must be greater than 0' do
       expect(@comment).to_not be_valid
     end
 
@@ -32,12 +32,12 @@ RSpec.describe Comment, type: :model do
       expect(@comment).to_not be_valid
     end
 
-    it "post_id must be an integer" do
-      @comment.post_id = "a"
+    it 'post_id must be an integer' do
+      @comment.post_id = 'a'
       expect(@comment).to_not be_valid
     end
 
-    it "post_id must be greater than 0" do
+    it 'post_id must be greater than 0' do
       expect(@comment).to_not be_valid
     end
   end

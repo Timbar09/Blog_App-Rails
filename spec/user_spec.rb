@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe "creation" do
+  describe 'creation' do
     before do
-      @user = User.create(name: "John Doe", photo: "https://picsum.photos/200/300", bio: "I am John Doe")
+      @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
     end
 
     it "name can't be blank" do
@@ -26,12 +26,12 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
 
-    it "posts_counter must be an integer" do
-      @user.posts_counter = "a"
+    it 'posts_counter must be an integer' do
+      @user.posts_counter = 'a'
       expect(@user).to_not be_valid
     end
 
-    it "posts_counter must be greater than or equal to 0" do
+    it 'posts_counter must be greater than or equal to 0' do
       @user.posts_counter = -1
       expect(@user).to_not be_valid
     end

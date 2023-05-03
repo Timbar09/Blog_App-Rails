@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  describe "creation" do
+  describe 'creation' do
     before do
-      @user = User.create(name: "John Doe", photo: "https://picsum.photos/200/300", bio: "I am John Doe")
-      @post = Post.create(author_id: @user.id, title: "My Post", text: "This is my post")
+      @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
+      @post = Post.create(author_id: @user.id, title: 'My Post', text: 'This is my post')
       @like = Like.create(author_id: @user.id, post_id: @post.id)
     end
 
@@ -13,12 +13,12 @@ RSpec.describe Like, type: :model do
       expect(@like).to_not be_valid
     end
 
-    it "user_id must be an integer" do
-      @like.author_id = "a"
+    it 'user_id must be an integer' do
+      @like.author_id = 'a'
       expect(@like).to_not be_valid
     end
 
-    it "user_id must be greater than 0" do
+    it 'user_id must be greater than 0' do
       expect(@like).to_not be_valid
     end
 
@@ -27,12 +27,12 @@ RSpec.describe Like, type: :model do
       expect(@like).to_not be_valid
     end
 
-    it "post_id must be an integer" do
-      @like.post_id = "a"
+    it 'post_id must be an integer' do
+      @like.post_id = 'a'
       expect(@like).to_not be_valid
     end
 
-    it "post_id must be greater than 0" do
+    it 'post_id must be greater than 0' do
       expect(@like).to_not be_valid
     end
   end

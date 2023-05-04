@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   describe 'creation' do
-    before do
+    before :all do
       @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
       @post = Post.create(author_id: @user.id, title: 'My Post', text: 'This is my post')
     end

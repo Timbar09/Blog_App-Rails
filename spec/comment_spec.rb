@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe 'creation' do
-    before do
+    before :all do
       @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
       @post = Post.create(author_id: @user.id, title: 'My Post', text: 'This is my post')
       @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: 'This is my comment')
@@ -24,6 +24,7 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'author_id must be greater than 0' do
+      @comment.author_id = 0
       expect(@comment).to_not be_valid
     end
 
@@ -38,6 +39,7 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'post_id must be greater than 0' do
+      @comment.post_id = -1
       expect(@comment).to_not be_valid
     end
   end

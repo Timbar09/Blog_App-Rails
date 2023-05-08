@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     select_user
     select_posts
   end
-  
+
   private
 
   def select_user

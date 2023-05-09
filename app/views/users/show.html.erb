@@ -23,4 +23,7 @@
           <span>Likes(<%= post.likes_counter %>)</span>
       </li>
     <% end %>
+  </ul>
+
+  <div class='see-all-posts-btn'><%= link_to 'See all posts', user_posts_path(@user) %></div>
 </section>

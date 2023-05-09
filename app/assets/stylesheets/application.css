@@ -34,6 +34,7 @@ ul {
 
 .users_card,
 .user_info {
+  margin-bottom: 2rem;
   padding: 1rem;
   display: flex;
   gap: 2rem;
@@ -52,4 +53,22 @@ ul {
 .post {
   margin-bottom: 2rem;
   padding: 2rem;
+}
+
+.comments {
+  margin: 2rem 0;
+  padding: 0.75rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment p {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }

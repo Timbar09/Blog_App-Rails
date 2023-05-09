@@ -1,11 +1,44 @@
 <section>
-  <h1>Posts by <%= @user.name %></h1>
+  <div class='user_info border1'>
+    <div class="photo border2">
+      <img src="<%= @user.photo %>" alt="<%= @user.name %>">
+    </div>
 
-  <ul>
-    <% @posts.each do |post| %>
-      <li>
-        <h2><% link_to post.title, post %></h2>
+    <div class="details">
+      <h2><%= @user.name %></h2>
+      <p>Posts(<%= @user.posts.count %>)</p>
+    </div>
+  </div>
+
+  <ul class='posts'>
+    <% @user.posts.each_with_index do |post, index| %>
+      <li class='post border1'>
+        <h2><%= link_to post.title, user_post_path(@user, post) %></h2>
         <p><%= post.text %></p>
+
+        <div class="comments-likes">
+          <span>Comments(<%= post.comments_counter %>)</span>
+          <span>Likes(<%= post.likes_counter %>)</span>
+        </div>
+
+        <%# Display message if there are no comments %>
+        <% if post.comments_counter == 0 %>
+          <div class='comments'>
+            <p>No comments yet!</p>
+          </div>
+        <% end %>
+
+        <%# Display comments if there are any %>
+        <% if post.comments_counter > 0 %>
+          <ul class='comments'>
+            <% post.five_recent_comments.each do |comment| %>
+              <li class='comment'>
+                <p><%= comment.author.name %></p>
+                <p class='comment-box border1'><%= comment.text %></p>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       </li>
     <% end %>
   </ul>

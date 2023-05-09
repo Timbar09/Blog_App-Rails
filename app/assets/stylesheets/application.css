@@ -20,24 +20,36 @@ ul {
   margin: 0;
 }
 
+.border1 {
+  border: solid 1px #ccc;
+}
+
+.border2 {
+  border: solid 2px #8d8c8c;
+}
+
 .users_title {
   text-align: center;
 }
 
-.users_card {
+.users_card,
+.user_info {
   padding: 1rem;
-  border: solid 1px #ccc;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .users_card:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.users_card .photo {
+.photo {
   width: 100px;
   height: 100px;
   border-radius: 0.5rem;
-  border: solid 2px #8d8c8c;
+}
+
+.post {
+  margin-bottom: 2rem;
+  padding: 2rem;
 }

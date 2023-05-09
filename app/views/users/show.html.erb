@@ -1,7 +1,26 @@
 <section>
-  <h1>User profile</h1>
+  <div class='user_info border1'>
+    <div class="photo border2">
+      <img src="<%= @user.photo %>" alt="<%= @user.name %>">
+    </div>
 
-  <img src="<%= @user.photo %>" alt="<%= @user.name %>">
+    <div class="details">
+      <h2><%= @user.name %></h2>
+      <p>Posts(<%= @user.posts.count %>)</p>
+    </div>
+  </div>
 
-  <h2><%= @user.name %></h2>
+  <p class='bio'><%= @user.bio %></p>
+
+  <ul class='posts'>
+    <% @user.three_recent_posts.each_with_index do |post, index| %>
+      <li class='post border1'>
+        <h3><%=  index + 1 %></h3>
+        <p><%= post.text %></p>
+
+        <div class="comments-likes">
+          <span>Comments(<%= post.comments.count %>)</span>
+          <span>Likes(<%= post.likes.count %>)</span>
+      </li>
+    <% end %>
 </section>

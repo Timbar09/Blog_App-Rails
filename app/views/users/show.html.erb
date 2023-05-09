@@ -16,7 +16,14 @@
     <% @user.three_recent_posts.each_with_index do |post, index| %>
       <li class='post border1'>
         <h2><%= link_to post.title, user_post_path(@user, post) %></h2>
-        <p><%= post.text %></p>
+        
+        <% if post.text.length > 100 %>
+          <p>
+            <%= truncate(post.text, length: 100) %> 
+          </p>
+        <% else %>
+          <p><%= post.text %></p>
+        <% end %>
 
         <div class="comments-likes">
           <span>Comments(<%= post.comments_counter %>)</span>
@@ -25,5 +32,5 @@
     <% end %>
   </ul>
 
-  <div class='see-all-posts-btn'><%= link_to 'See all posts', user_posts_path(@user) %></div>
+  <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
 </section>

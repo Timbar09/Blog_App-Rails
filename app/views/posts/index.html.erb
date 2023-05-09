@@ -21,14 +21,12 @@
           <span>Likes(<%= post.likes_counter %>)</span>
         </div>
 
-        <%# Display message if there are no comments %>
         <% if post.comments_counter == 0 %>
           <div class='comments'>
             <p>No comments yet!</p>
           </div>
         <% end %>
 
-        <%# Display comments if there are any %>
         <% if post.comments_counter > 0 %>
           <ul class='comments'>
             <% post.five_recent_comments.each do |comment| %>

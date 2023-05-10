@@ -75,6 +75,8 @@ ul {
 .post {
   margin-bottom: 2rem;
   padding: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
 }
 
 .see-all {
@@ -86,8 +88,12 @@ ul {
   padding: 0.5rem 1rem;
 }
 
+.comments-likes {
+  text-align: right;
+}
+
 .comments {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   padding: 0.75rem;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -102,4 +108,13 @@ ul {
   margin: 0.25rem 0;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+
+.full-post {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.full-post h1 {
+  margin: 0;
 }

@@ -6,22 +6,7 @@
       <li class='post border1'>
         <%= render 'shared/post_card', post: post %>
 
-        <% if post.comments_counter == 0 %>
-          <div class='comments'>
-            <p>No comments yet!</p>
-          </div>
-        <% end %>
-
-        <% if post.comments_counter > 0 %>
-          <ul class='comments'>
-            <% post.five_recent_comments.each do |comment| %>
-              <li class='comment'>
-                <p><%= comment.author.name %></p>
-                <p class='comment-box border1'><%= comment.text %></p>
-              </li>
-            <% end %>
-          </ul>
-        <% end %>
+        <%= render 'shared/comment', post: post, comments: post.five_recent_comments %>
       </li>
     <% end %>
   </ul>

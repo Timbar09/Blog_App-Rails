@@ -1,5 +1,5 @@
 <div class='card'>
-  <h2><%= link_to post.title, user_post_path(@user, post) %></h2>
+  <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
   
   <% if post.text.length > 100 %>
     <p>

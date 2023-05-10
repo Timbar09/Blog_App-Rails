@@ -13,3 +13,124 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --dark: rgb(30, 30, 30);
+  --dark-grey: rgb(101, 101, 101);
+  --grey: rgb(182, 182, 182);
+  --light-grey: rgb(231, 231, 231);
+  --very-light-grey: rgb(250, 250, 250);
+  --white: rgb(255, 255, 255);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--very-light-grey);
+  color: var(--dark-grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark);
+}
+
+section {
+  max-width: 40em;
+  margin: 2rem auto 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.border1 {
+  border: solid 1px var(--light-grey);
+}
+
+.border2 {
+  border: solid 2px var(--grey);
+}
+
+.users_title {
+  text-align: center;
+}
+
+.user_card {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  display: flex;
+  gap: 2rem;
+}
+
+.user_card .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.5rem;
+}
+
+.bio {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--light-grey);
+}
+
+.bio h2 {
+  margin-top: 0;
+  font-size: 1.25em;
+}
+
+.post {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+}
+
+.see-all {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.see-all a {
+  padding: 0.5rem 1rem;
+}
+
+.comments-likes {
+  text-align: right;
+  font-size: 0.85em;
+}
+
+.comments {
+  margin: 2rem 0 0;
+  padding: 0.75rem;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.comment {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment p {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.full-post {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.full-post h1 {
+  margin: 0;
+}

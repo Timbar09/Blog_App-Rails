@@ -3,16 +3,7 @@
 
   <ul>
     <% @users.each do |user| %>
-      <li class='users_card border1'>
-        <div class="photo border2">
-          <img src="<%= user.photo %>" alt="<%= user.name %>">
-        </div>
-
-        <div class="Bio">
-          <h2><%= link_to user.name, user %></h2>
-          <p>Posts(<%= user.posts_counter%>)</p>
-        </div>
-      </li>
+      <%= render 'shared/user_card', user: user %>
     <% end %>
   </ul>
 </section>

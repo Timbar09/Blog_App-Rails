@@ -1,14 +1,5 @@
 <section>
-  <div class='user_info border1'>
-    <div class="photo border2">
-      <img src="<%= @user.photo %>" alt="<%= @user.name %>">
-    </div>
-
-    <div class="details">
-      <h2><%= @user.name %></h2>
-      <p>Posts(<%= @user.posts.count %>)</p>
-    </div>
-  </div>
+  <%= render 'shared/user_card', user: @user %>
 
   <ul class='posts'>
     <% @user.posts.each_with_index do |post, index| %>

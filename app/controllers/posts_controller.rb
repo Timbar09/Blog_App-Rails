@@ -18,4 +18,8 @@ class PostsController < ApplicationController
   def select_posts
     @post = Post.find(params[:id])
   end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end

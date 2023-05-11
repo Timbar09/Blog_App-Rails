@@ -264,3 +264,11 @@ ul {
   width: 100%;
   max-width: 30rem;
 }
+
+.like-form {
+  display: inline-block;
+}
+
+.like-form input {
+  background-color: transparent;
+}

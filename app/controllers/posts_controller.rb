@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     post.author = current_user
 
     if post.save
-    redirect_to user_posts_path(current_user), notice: 'Post created'
+      redirect_to user_posts_path(current_user), notice: 'Post created'
     else
       render :new, alert: 'Post not created'
     end

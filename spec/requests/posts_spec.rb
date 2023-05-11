@@ -17,7 +17,7 @@ RSpec.describe 'Posts controller: ', type: :request do
       end
 
       it('includes the placeholder text') do
-        expect(response.body).to include("Miles")
+        expect(response.body).to include('Miles')
       end
     end
 

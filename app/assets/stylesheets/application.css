@@ -75,6 +75,11 @@ ul {
   text-align: center;
 }
 
+.users-empty-message {
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .user_card {
   margin-bottom: 2rem;
   padding: 1rem;

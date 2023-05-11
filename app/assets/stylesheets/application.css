@@ -14,7 +14,21 @@
  *= require_self
  */
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
+  --green: rgb(17, 190, 55);
+  --black: rgb(0, 0, 0);
+  --very-dark: rgb(15, 15, 15);
   --dark: rgb(30, 30, 30);
   --dark-grey: rgb(101, 101, 101);
   --grey: rgb(182, 182, 182);
@@ -100,7 +114,27 @@ ul {
 }
 
 .see-all a {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--dark);
+  color: var(--very-light-grey);
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.see-all a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+.see-all a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .comments-likes {
@@ -133,4 +167,77 @@ ul {
 
 .full-post h1 {
   margin: 0;
+}
+
+.create-post {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  min-height: 26rem;
+}
+
+.create-post form {
+  padding: 1rem;
+  width: 100%;
+}
+
+.form-field label {
+  padding: 0.5rem 0;
+  display: block;
+  font-family: inherit;
+}
+
+.form-field input,
+.form-field textarea {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.form-field textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.submit {
+  text-align: right;
+}
+
+.cta {
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--green);
+  color: var(--very-light-grey);
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.cta:hover {
+  translate: 0 -2px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cta:active {
+  translate: 0 -1px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.new-link {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.new-link .cta {
+  width: 100%;
+  max-width: 30rem;
 }

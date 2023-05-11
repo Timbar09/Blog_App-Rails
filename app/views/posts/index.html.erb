@@ -1,6 +1,10 @@
 <section>
   <%= render 'shared/user_card', user: @user %>
 
+  <div class='new-link'>
+    <%= link_to 'Create a new post', new_user_post_path(@user), class: 'cta border1' %>
+  </div>
+
   <ul class='posts'>
     <% if @user.posts.empty? %>
       <li class='post border1'>This user has no posts yet!</li>

@@ -169,7 +169,7 @@ ul {
   margin: 0;
 }
 
-.create-post {
+.create {
   margin-top: 0;
   display: flex;
   flex-direction: column;
@@ -179,7 +179,7 @@ ul {
   min-height: 26rem;
 }
 
-.create-post form {
+.create form {
   padding: 1rem;
   width: 100%;
 }
@@ -204,30 +204,47 @@ ul {
   resize: none;
 }
 
-.submit {
+.actions {
   text-align: right;
 }
 
-.cta {
+.btn {
   border: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background-color: var(--green);
-  color: var(--very-light-grey);
   font-family: inherit;
   cursor: pointer;
+}
+
+.btn-enteract {
+  color: var(--dark);
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.btn-enteract:hover {
+  color: var(--green);
+}
+
+.btn-enteract:active {
+  color: var(--dark);
+  background-color: var(--light-grey);
+}
+
+.btn-create {
+  background-color: var(--green);
+  color: var(--very-light-grey);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.cta:hover {
+.btn-create:hover {
   translate: 0 -2px;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
 }
 
-.cta:active {
+.btn-create:active {
   translate: 0 -1px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
 }
@@ -237,7 +254,7 @@ ul {
   margin-bottom: 2rem;
 }
 
-.new-link .cta {
+.new-link .btn-create {
   width: 100%;
   max-width: 30rem;
 }

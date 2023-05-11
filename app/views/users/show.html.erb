@@ -6,9 +6,7 @@
     <p><%= @user.bio %></p>
   </div>
 
-  <div class='new-link'>
-    <%= link_to 'Create a new post', new_user_post_path(@user), class: 'btn btn-create' %>
-  </div>
+  <%= render 'shared/open_post_form', user: @user %>
 
   <ul class='posts'>
     <% if @user.posts.empty? %>

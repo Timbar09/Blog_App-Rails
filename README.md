@@ -21,7 +21,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 My_Enumerable-Ruby <a name="about-project"></a>
+# 📖 Blog_App-Ruby <a name="about-project"></a>
 
 > This is a fully functional web appliction that showcases a list of posts where users can read and interact with them by adding comments and liking posts. It is an ideal platform for bloggers who want to share their thoughts, ideas, and experiences with their readers.
 
@@ -134,7 +134,6 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add forms.**
 - [ ] **Integration specs for Views and fix n+1 problems.**
 - [ ] **Add device.**
 - [ ] **Add authorization rules.**

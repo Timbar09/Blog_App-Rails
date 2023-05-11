@@ -8,7 +8,7 @@
   <ul class='comments'>
     <% comments.each do |comment| %>
       <li class='comment'>
-        <p><%= comment.author.id == 2 ? 'Me' : comment.author.name %></p>
+        <p><%= comment.author.name %></p>
         <p class='comment-box border1'><%= comment.text %></p>
       </li>
     <% end %>

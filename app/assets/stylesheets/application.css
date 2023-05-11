@@ -208,6 +208,11 @@ ul {
   text-align: right;
 }
 
+.full-post .actions,
+.post_card .actions {
+  text-align: left;
+}
+
 .btn {
   border: none;
   text-decoration: none;
@@ -219,6 +224,7 @@ ul {
 }
 
 .btn-enteract {
+  font-size: 0.85em;
   color: var(--dark);
   transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
 }

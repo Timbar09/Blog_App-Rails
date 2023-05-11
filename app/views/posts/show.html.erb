@@ -9,6 +9,8 @@
 
     <p><%= @post.text %></p>
 
+    <%= render 'shared/enteract', user: @user, post: @post %>
+
     <%= render 'shared/comment', post: @post, comments: @post.comments %>
   </div>
 

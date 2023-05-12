@@ -2,8 +2,12 @@
   <h1 class='users_title'>Users</h1>
 
   <ul>
-    <% @users.each do |user| %>
-      <%= render 'shared/user_card', user: user %>
+    <% if @users.empty? %>
+      <p class='users-empty-message'>No users yet!</p>
+    <% else %>
+      <% @users.each do |user| %>
+        <%= render 'shared/user_card', user: user %>
+      <% end %>
     <% end %>
   </ul>
 </section>

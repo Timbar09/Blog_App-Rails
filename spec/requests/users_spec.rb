@@ -35,7 +35,7 @@ RSpec.describe 'Users controller: ', type: :request do
       end
 
       it('includes the placeholder text') do
-        expect(response.body).to include('User profile')
+        expect(response.body).to include('I am a test user.')
       end
     end
   end

@@ -1,0 +1,7 @@
+<div class="actions">
+  <%= link_to 'Add comment', new_user_post_comment_path(@user, @post), class: 'btn btn-enteract' %>
+  <%# Add a form to increment the likes counter %>
+  <%= form_with url: user_post_likes_path(@user, @post), class: 'like-form' do |form| %>
+    <%= form.submit 'Like', class: 'btn btn-enteract' %>
+  <% end %>
+</div>

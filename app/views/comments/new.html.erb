@@ -1,4 +1,6 @@
-<section class='create'>
+<% content_for :title, 'Add a comment' %>
+
+<main class='main create'>
   <h1>Add a comment</h1>
 
   <%= form_with model: @comment, url: user_post_comments_path do |form| %>
@@ -12,4 +14,4 @@
     </div>
   <% end %>
 
-</section>
+</main>

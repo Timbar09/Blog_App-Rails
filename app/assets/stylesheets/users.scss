@@ -1,0 +1,38 @@
+.user {
+  &_title {
+    text-align: center;
+  }
+
+  &_empty-message {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  &_card {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    display: flex;
+    gap: 2rem;
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &_profile {
+    .bio {
+      margin-bottom: 2rem;
+      padding: 2rem;
+      background-color: var(--light-grey);
+
+      h2 {
+        margin-top: 0;
+        font-size: 1.25em;
+      }
+    }
+  }
+}

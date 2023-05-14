@@ -1,0 +1,92 @@
+.see-all {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.see-all a {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--dark);
+  color: var(--very-light-grey);
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.see-all a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+.see-all a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  text-align: right;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-enteract {
+  font-size: 0.85em;
+  color: var(--dark);
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.btn-enteract:hover {
+  color: var(--green);
+}
+
+.btn-enteract:active {
+  color: var(--dark);
+  background-color: var(--light-grey);
+}
+
+.btn-create {
+  background-color: var(--green);
+  color: var(--very-light-grey);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.btn-create:hover {
+  translate: 0 -2px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-create:active {
+  translate: 0 -1px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.new-link {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.new-link .btn-create {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.like-form {
+  display: inline-block;
+}
+
+.like-form input {
+  background-color: transparent;
+}

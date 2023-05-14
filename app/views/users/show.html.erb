@@ -1,4 +1,6 @@
-<section>
+<% content_for :title, @user.name || 'User Profile' %>
+
+<main class='main user_profile'>
   <%= render 'shared/user_card', user: @user %>
 
   <div class='bio'>
@@ -8,13 +10,13 @@
 
   <%= render 'shared/open_post_form', user: @user %>
 
-  <ul class='posts'>
+  <ul class='post_list'>
     <% if @user.posts.empty? %>
-      <li class='post border1'>This user has no posts yet!</li>
+      <li class='post_content border1'>This user has no posts yet!</li>
     <% end %>
 
     <% @user.three_recent_posts.each_with_index do |post, index| %>
-      <li class='post border1'>
+      <li class='post_content border1'>
         <%= render 'shared/post_card', post: post %>
       </li>
     <% end %>
@@ -23,4 +25,4 @@
   <% unless @user.posts.empty? %>
     <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
   <% end %>
-</section>
+</main>

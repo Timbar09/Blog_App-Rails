@@ -1,4 +1,4 @@
-<div class='card'>
+<div class='post_card'>
   <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
   
   <% if post.text.length > 100 %>
@@ -9,7 +9,7 @@
     <p><%= post.text %></p>
   <% end %>
 
-  <div class="comments-likes">
+  <div class="post_card_comments-likes">
     <span>Comments(<%= post.comments_counter %>)</span>
     <span>Likes(<%= post.likes_counter %>)</span>
   </div>

@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  inset: 1rem auto 1rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--very-dark);
+  overflow-y: auto;
+
+  #logo {
+    color: var(--white);
+    margin-bottom: 1rem;
+    border-bottom: solid 2px var(--dark);
+  }
+
+  .nav_link {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--grey);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--dark);
+    }
+
+    &.active {
+      background-color: var(--dark-grey);
+    }
+  }
+}

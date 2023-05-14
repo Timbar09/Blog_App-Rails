@@ -1,0 +1,36 @@
+.create {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  min-height: 26rem;
+
+  form {
+    padding: 1rem;
+    width: 100%;
+
+    .form-field {
+      label {
+        padding: 0.5rem 0;
+        display: block;
+        font-family: inherit;
+      }
+
+      input,
+      textarea {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        font-family: inherit;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+      }
+
+      textarea {
+        height: 10rem;
+        resize: none;
+      }
+    }
+  }
+}

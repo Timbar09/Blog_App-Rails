@@ -1,0 +1,19 @@
+.comment {
+  &_list {
+    margin: 2rem 0 0;
+    padding: 0.75rem;
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  &_item {
+    display: flex;
+    gap: 1rem;
+
+    p {
+      margin: 0.25rem 0;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

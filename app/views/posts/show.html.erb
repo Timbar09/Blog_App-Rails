@@ -1,8 +1,10 @@
-<section>
-  <div class='full-post border1'>
+<% content_for :title, @post.title || 'Post' %>
+
+<main class='main post_infull'>
+  <div class='post_content border1'>
     <h1><%= @post.title %> by <%= @user.name %></h1>
     
-    <div class="comments-likes">
+    <div class="post_card_comments-likes">
       <span>Comments(<%= @post.comments_counter %>)</span>
       <span>Likes(<%= @post.likes_counter %>)</span>
     </div>
@@ -14,4 +16,4 @@
     <%= render 'shared/comment', post: @post, comments: @post.comments %>
   </div>
 
-</section>
+</main>

@@ -1,19 +1,21 @@
-<section>
+<% content_for :title, "Posts by #{@user.name || 'User'}" %>
+
+<main class='main posts'>
   <%= render 'shared/user_card', user: @user %>
 
   <%= render 'shared/open_post_form', user: @user %>
 
-  <ul class='posts'>
+  <ul class='posts_list'>
     <% if @user.posts.empty? %>
-      <li class='post border1'>This user has no posts yet!</li>
+      <li class='post_content border1'>This user has no posts yet!</li>
     <% end %>
 
     <% @user.posts.each_with_index do |post, index| %>
-      <li class='post border1'>
+      <li class='post_content border1'>
         <%= render 'shared/post_card', post: post %>
 
         <%= render 'shared/comment', post: post, comments: post.five_recent_comments %>
       </li>
     <% end %>
   </ul>
-</section>
+</main>

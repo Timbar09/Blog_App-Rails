@@ -1,13 +1,14 @@
-<section>
-  <h1 class='users_title'>Users</h1>
+<%= content_for :title, 'Users' %>
 
+<main class="main user">
+  <h1 class="user_title">Users</h1>
   <ul>
     <% if @users.empty? %>
-      <p class='users-empty-message'>No users yet!</p>
+      <p class="user_empty-message">No users yet!</p>
     <% else %>
       <% @users.each do |user| %>
         <%= render 'shared/user_card', user: user %>
       <% end %>
     <% end %>
   </ul>
-</section>
+</main>

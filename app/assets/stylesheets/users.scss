@@ -9,21 +9,40 @@
   }
 
   &_card {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    display: flex;
-    gap: 2rem;
+    list-style: none;
 
-    .photo {
-      width: 100px;
-      height: 100px;
+    a {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      text-decoration: none;
       border-radius: 0.5rem;
+      color: inherit;
+      background-color: var(--white);
+      display: flex;
+      gap: 2rem;
+      transition: box-shadow 150ms ease-in-out;
+
+      &:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 0.5rem;
+      }
     }
   }
 
   &_profile {
+    .user_card a {
+      pointer-events: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
     .bio {
       margin-bottom: 2rem;
       padding: 2rem;

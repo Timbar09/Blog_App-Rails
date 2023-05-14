@@ -5,6 +5,20 @@
     background-color: var(--white);
     border-radius: 0.5rem;
 
+    .head {
+      background-color: var(--light-grey);
+      border-radius: 0.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    &-author {
+      font-size: 0.55em;
+      color: var(--dark-grey);
+    }
+
     .actions {
       text-align: left;
     }
@@ -20,12 +34,6 @@
     &_comments-likes {
       text-align: right;
       font-size: 0.85em;
-    }
-  }
-
-  &_infull {
-    .content h1 {
-      margin: 0;
     }
   }
 }

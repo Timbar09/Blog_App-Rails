@@ -2,11 +2,13 @@
 
 <main class='main post_infull'>
   <div class='post_content border1'>
-    <h1><%= @post.title %> by <%= @user.name %></h1>
-    
-    <div class="post_card_comments-likes">
-      <span>Comments(<%= @post.comments_counter %>)</span>
-      <span>Likes(<%= @post.likes_counter %>)</span>
+    <div class='head padding-1'>
+      <h1><%= @post.title %> <span class='post_content-author'>by <%= @user.name %> </span></h1>
+      
+      <div class="post_card_comments-likes">
+        <span>Comments(<%= @post.comments_counter %>)</span>
+        <span>Likes(<%= @post.likes_counter %>)</span>
+      </div>
     </div>
 
     <p><%= @post.text %></p>

@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    select_user
+    find_user
   end
 
   private
 
-  def select_user
+  def find_user
     @user = User.find(params[:id])
   end
 end

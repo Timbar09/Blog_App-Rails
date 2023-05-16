@@ -18,6 +18,9 @@ RSpec.describe 'Posts', type: :system, js: true do
       @comment3 = Comment.create(text: 'How come, G?.', author: @cr7, post: @messi_post2)
       @comment4 = Comment.create(text: 'I miss Iniesta and xavi, G!.', author: @messi, post: @messi_post2)
       @comment5 = Comment.create(text: 'I miss Ramos and Marcelo, G!.', author: @cr7, post: @messi_post2)
+      @comment6 = Comment.create(text: 'I miss the old days, G!.', author: @messi, post: @messi_post1)
+      @comment7 = Comment.create(text: 'I miss the old days too, G!.', author: @cr7, post: @messi_post3)
+      @comment8 = Comment.create(text: 'I miss the old days too, G!.', author: @messi, post: @messi_post4)
 
       visit user_posts_path(@messi)
     end
@@ -46,6 +49,12 @@ RSpec.describe 'Posts', type: :system, js: true do
       @messi.posts.each do |post|
         expect(page).to have_content("Comments(#{post.comments_counter})")
         expect(page).to have_content("Likes(#{post.likes_counter})")
+      end
+    end
+
+    it 'should render the first comments on a post' do
+      @messi.posts.each do |post|
+        expect(page).to have_content(post.comments.first.text)
       end
     end
 

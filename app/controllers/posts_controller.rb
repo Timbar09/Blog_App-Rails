@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     find_user
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
   end
 
   def new

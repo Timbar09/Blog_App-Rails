@@ -23,7 +23,6 @@ RSpec.describe 'Users', type: :system, js: true do
     end
 
     it 'should redirect to the user page when a user is clicked' do
-      # Click on the .user_card anchor tag that contains the user's name
       find('.user_card', text: @user.name).click
       expect(page).to have_current_path(user_path(@user))
     end
@@ -43,7 +42,7 @@ RSpec.describe 'Users', type: :system, js: true do
     it 'shows the user profile information' do
       expect(page).to have_css("img[src*='3.jpg']")
       expect(page).to have_content(@user.name)
-      expect(page).to have_content("Posts(#{@user.posts.count})")
+      expect(page).to have_content("Posts(#{@user.posts_counter})")
       expect(page).to have_content(@user.bio)
     end
   

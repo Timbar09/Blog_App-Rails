@@ -54,4 +54,43 @@ RSpec.describe 'Posts', type: :system, js: true do
 
     end
   end
+
+  describe "post show page" do
+    let(:user) { create(:user) }
+    let(:post) { create(:post, user: user) }
+    let!(:comment1) { create(:comment, post: post, user: user) }
+    let!(:comment2) { create(:comment, post: post, user: user) }
+
+    before do
+      visit post_path(post)
+    end
+
+
+    it "should show post's title" do
+      expect(page).to have_content(post.title)
+    end
+    it "should show who wrote the post" do
+      expect(page).to have_content("Author: #{user.name}") 
+    end
+    it "should show how many comments it has" do
+      expect(page).to have_content("Comments: #{post.comments.comments_counter}")
+    end
+    it "should show how many likes it has" do
+      expect(page).to have_content("Likes: #{post.likes_counter}") 
+    end
+    it "should show the post body" do
+      expect(page).to have_content(post.text) 
+    end
+    it "should show the username of each commentor" do
+      post.comments.each do |comment|
+        expect(page).to have_content(comment.user.name)
+      end
+      
+    end
+    it "should show the comment each commentor left" do
+      post.comments.each do |comment|
+        expect(page).to have_content(comment.text)
+      end 
+    end
+  end
 end

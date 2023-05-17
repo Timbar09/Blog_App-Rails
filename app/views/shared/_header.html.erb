@@ -1,21 +1,36 @@
 <header class='header padding-1'>
   <nav class='nav'>
     <ul class='nav_links'>
-      <li>
-        <%= link_to 'Blog App', root_path, class: 'nav_link', id: 'logo' %>
-      </li>
+        <li>
+          <%= link_to 'Blog App', root_path, class: 'nav_link', id: 'logo' %>
+        </li>
 
-      <li>
-        <%= link_to 'Users', users_path, class: 'nav_link' %>
-      </li>
+        <li>
+          <%= link_to 'Users', users_path, class: 'nav_link' %>
+        </li>
 
-      <li>
-        <%= link_to 'My Profile', user_path(current_user), class: 'nav_link' %>
-      </li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to 'My Profile', user_path(current_user), class: 'nav_link' %>
+        </li>
 
-      <li>
-        <%= link_to 'My Posts', user_posts_path(current_user), class: 'nav_link' %>
-      </li>
+        <li>
+          <%= link_to 'My Posts', user_posts_path(current_user), class: 'nav_link' %>
+        </li>
+
+        <li>
+          <%= link_to 'Log Out', destroy_user_session_path, data: {
+            turbo_method: :delete,
+          }, class: 'nav_link' %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to 'Log In', new_user_session_path, class: 'nav_link' %>
+        </li>
+        <li>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'nav_link' %>
+        </li>
+      <% end %>
     </ul>
   </nav>
 </header>

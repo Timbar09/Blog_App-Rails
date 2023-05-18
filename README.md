@@ -8,7 +8,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -71,12 +70,6 @@
 
 - **Like System**
   > The app has a like system that allows users to like posts, providing a quick and easy way for readers to show their appreciation for posts they enjoyed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Live Demo link comming soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

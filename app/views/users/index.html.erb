@@ -1,6 +1,8 @@
 <%= content_for :title, 'Users' %>
 
 <main class="main user">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <ul>
     <% if @users.empty? %>
       <p class="user_empty-message">No users yet!</p>

@@ -30,9 +30,12 @@ body {
   max-width: 90em;
 }
 
-.container {
-  max-width: 75em;
-  margin: 0 auto;
+.notice-alert {
+  position: absolute;
+  background: lightgreen;
+  inset: 0.25rem 20vw auto;
+  text-align: center;
+  border-radius: 0.5rem;
 }
 
 .padding-1 {

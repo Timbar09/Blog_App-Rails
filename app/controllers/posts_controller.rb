@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
+  before_action :find_user, only: [:index, :show, :destroy]
+  before_action :find_post, only: [:show, :destroy]
 
   def index
-    find_user
     @posts = @user.posts.includes(:comments)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def new
@@ -22,14 +28,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    find_user
-    find_post
   end
 
   def destroy
-    find_user
-    find_post
-
     if @post.destroy
       redirect_to user_posts_path(current_user), notice: 'Post deleted'
     else

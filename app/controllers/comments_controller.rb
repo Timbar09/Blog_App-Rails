@@ -1,6 +1,11 @@
 class CommentsController < ApplicationController
-  before_action :find_user, only: [:create]
-  before_action :find_post, only: [:create]
+  before_action :find_user, only: [:index, :create]
+  before_action :find_post, only: [:index, :create, :destroy]
+
+  def index
+    @comments = @post.comments
+    render json: @comments
+  end
 
   def new
     @comment = Comment.new
@@ -19,7 +24,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    find_post
     @comment = @post.comments.find(params[:id])
 
     if @comment.destroy

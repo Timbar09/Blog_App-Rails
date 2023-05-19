@@ -7,11 +7,11 @@ class Ability
     # Define abilities for the user here. For example:
     
     user ||= User.new
-    if user.admin?
-      can :manage, :all
-    else
-      can :read, :all
-    end
+    can :read, :all
+    return unless user.present?
+    can :manage, :all, author_id: user.id
+    return unless user.role == 'admin'
+    can :manage, :all
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

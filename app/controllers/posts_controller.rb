@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     find_user
     @posts = @user.posts.includes(:comments)
@@ -22,6 +24,17 @@ class PostsController < ApplicationController
   def show
     find_user
     find_post
+  end
+
+  def destroy
+    find_user
+    find_post
+
+    if @post.destroy
+      redirect_to user_posts_path(current_user), notice: 'Post deleted'
+    else
+      redirect_to user_posts_path(current_user), alert: 'Post not deleted'
+    end
   end
 
   private

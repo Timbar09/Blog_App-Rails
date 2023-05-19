@@ -25,6 +25,17 @@
   }
 
   &_card {
+    &:hover {
+      .btn-delete {
+        visibility: visible;
+      }
+    }
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &-grid {
       display: flex;
       justify-content: space-between;

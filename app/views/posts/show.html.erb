@@ -3,7 +3,10 @@
 <main class='main post_infull'>
   <div class='post_content border1'>
     <div class='head padding-1'>
-      <h1><%= @post.title %> <span class='post_content-author'>by <%= @user.name %> </span></h1>
+      <div class='post_card-header'>
+        <h1><%= @post.title %> <span class='post_content-author'>by <%= @user.name %> </span></h1>
+        <%= render 'shared/delete_btn', object: @post, path: user_post_path(@user, @post) %>
+      </div>
       
       <div class="post_card_comments-likes">
         <span>Comments(<%= @post.comments_counter %>)</span>

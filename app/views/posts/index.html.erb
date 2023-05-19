@@ -1,11 +1,11 @@
 <% content_for :title, "Posts by #{@user.name || 'User'}" %>
 
-<main class='main posts'>
+<main class='main post'>
   <%= render 'shared/user_card', user: @user %>
 
   <%= render 'shared/open_post_form', user: @user %>
 
-  <ul class='posts_list'>
+  <ul class='post_list'>
     <% if @user.posts.empty? %>
       <li class='post_content border1'>
         <%= "#{@user.name || 'This user'} has no posts yet!" %>

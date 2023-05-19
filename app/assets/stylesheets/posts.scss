@@ -1,4 +1,38 @@
 .post {
+  &_card {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:hover {
+        .btn-delete {
+          visibility: visible;
+        }
+      }
+
+      h3 a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_comments-likes {
+      text-align: right;
+      font-size: 0.85em;
+    }
+  }
+
   &_content {
     margin-bottom: 2rem;
     padding: 2rem;
@@ -8,6 +42,10 @@
     .head {
       background-color: var(--light-grey);
       border-radius: 0.5rem;
+
+      .post_card-header {
+        padding-bottom: 0.5rem;
+      }
     }
 
     h1 {
@@ -21,19 +59,6 @@
 
     .actions {
       text-align: left;
-    }
-  }
-
-  &_card {
-    &-grid {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &_comments-likes {
-      text-align: right;
-      font-size: 0.85em;
     }
   }
 }

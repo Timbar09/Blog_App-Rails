@@ -1,5 +1,10 @@
 <div class='post_card'>
-  <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+  <div class='post_card-header'>
+    <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+    <span>
+      <%= render 'shared/delete_btn', object: post, path: user_post_path(@user, post) %>
+    </span>
+  </div>
   
   <% if post.text.length > 100 %>
     <p>

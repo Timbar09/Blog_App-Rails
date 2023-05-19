@@ -82,3 +82,5 @@ gem 'sass-rails', '~> 6.0'
 gem 'font-awesome-sass', '~> 5.15'
 
 gem 'devise'
+
+gem 'cancancan'

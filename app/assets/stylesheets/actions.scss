@@ -77,7 +77,9 @@
   background-color: var(--light-red);
   color: var(--very-light-grey);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  transition: translate 150ms ease-in-out, box-shadow 150ms ease-in-out,
+  transition:
+    translate 150ms ease-in-out,
+    box-shadow 150ms ease-in-out,
     background-color 150ms ease-in-out;
   visibility: hidden;
 }

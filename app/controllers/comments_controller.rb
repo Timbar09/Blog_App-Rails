@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :find_user, only: [:index, :create]
-  before_action :find_post, only: [:index, :create, :destroy]
+  before_action :find_user, only: %i[index create]
+  before_action :find_post, only: %i[index create destroy]
 
   def index
     @comments = @post.comments
@@ -17,9 +17,15 @@ class CommentsController < ApplicationController
     comment.post = @post
 
     if comment.save
-      redirect_to user_post_path(@user, @post), notice: 'Comment created.'
+      respond_to do |format|
+        format.html { redirect_to user_post_path(@user, @post), notice: 'Comment created.' }
+        format.json { render json: comment }
+      end
     else
-      render :new, alert: 'Comment not created.'
+      respond_to do |format|
+        format.html { render :new, alert: 'Comment not created.' }
+        format.json { render json: comment.errors, status: :unprocessable_entity }
+      end
     end
   end
 

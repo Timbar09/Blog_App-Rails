@@ -8,8 +8,12 @@
   <ul class='comment_list'>
     <% comments.each do |comment| %>
       <li class='comment_item'>
-        <p><%= comment.author.name %></p>
-        <p class='comment-box border1'><%= comment.text %></p>
+        <span>
+          <p><%= comment.author.name %></p>
+          <p class='comment-box border1'><%= comment.text %></p>
+        </span>
+
+        <%= render 'shared/delete_btn', object: comment, path: user_post_comment_path(@user, post, comment) %>
       </li>
     <% end %>
   </ul>

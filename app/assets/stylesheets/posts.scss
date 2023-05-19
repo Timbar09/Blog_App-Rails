@@ -8,6 +8,10 @@
     .head {
       background-color: var(--light-grey);
       border-radius: 0.5rem;
+
+      .post_card-header {
+        padding-bottom: 0.5rem;
+      }
     }
 
     h1 {
@@ -25,15 +29,16 @@
   }
 
   &_card {
-    &:hover {
-      .btn-delete {
-        visibility: visible;
-      }
-    }
     &-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      &:hover {
+        .btn-delete {
+          visibility: visible;
+        }
+      }
     }
 
     &-grid {

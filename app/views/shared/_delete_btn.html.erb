@@ -1,3 +1,5 @@
-<div class='actions'>
-  <%= button_to 'Delete', path, method: :delete, class: 'btn btn-delete' %>
-</div>
+<% if can? :destroy, object %>
+  <div class='actions'>
+    <%= button_to 'Delete', path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+  </div>
+<% end %>
